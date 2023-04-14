@@ -26,7 +26,7 @@ lab:
 
     ![画像 10](../images/dp-300-module-01-lab-10.png)
 
-1. **[SQL デプロイ オプションを選択する]** ウィンドウで、 **[SQL 仮想マシン]** の下のドロップダウン ボックスをクリックします。 **[無料の SQL Server ライセンス: Windows Server 2022 上の SQL 2019 Developer]** というラベルの付いたオプションを選択します。 **[作成]** を選択します。
+1. **[SQL デプロイ オプションを選択する]** ウィンドウで、 **[SQL 仮想マシン]** の下のドロップダウン ボックスをクリックします。 **[Free SQL Server License: SQL 2019 Developer on Windows Server 2022]** というラベルの付いたオプションを選択します。 **[作成]** を選択します。
 
     ![画像 11](../images/dp-300-module-01-lab-11.png)
 
@@ -37,8 +37,9 @@ lab:
     - **仮想マシン名:** azureSQLServerVM
     - **リージョン:** &lt;リソース グループ用に選択されたリージョンと同じローカル リージョン&gt;
     - **可用性オプション:** インフラストラクチャ冗長は必要ありません
-    - **イメージ:** 無料の SQL Server ライセンス: Windows Server 2022 上の SQL 2019 Developer - Gen1
-    - **Azure スポット インスタンス:** なし (オフ)
+    - **セキュリティの種類:** Standard
+    - **イメージ:** Free SQL Server License: SQL 2019 Developer on Windows Server 2022 - Gen1
+    - **Azure スポット 割引:** なし (オフ)
     - **サイズ:** Standard *D2s_v3* (2 vCPU、8 GiB メモリ)。 このオプションを表示するには [すべてのサイズを表示] リンクを選択することが必要な場合があります。
     - **Administrator アカウントのユーザー名:** sqladmin
     - **管理者アカウントのパスワード:** pwd!DP300lab01 (または基準を満たす独自のパスワード)
@@ -97,7 +98,7 @@ lab:
 
     ![画像 22](../images/dp-300-module-01-lab-22.png)
 
-    **注:** エラー "**ポートの前提条件が満たされていません**" が表示された場合。 必ずリンクを選択して、"ポート番号" フィールドに記載されている宛先ポートを含む受信ネットワーク セキュリティ グループ ルールを追加します。**
+    **注:** エラー "**ポートの前提条件が満たされていません**" が表示された場合。 リンクを選択して、"ポート番号" フィールドに記載されている宛先ポートを含む受信ネットワーク セキュリティ グループ ルールを追加します。
 
     ![画像 22_1](../images/dp-300-module-01-lab-22_1.png)
 
@@ -113,7 +114,7 @@ lab:
 
     ![画像 26](../images/dp-300-module-01-lab-26.png)
 
-1. Windows の [スタート] ボタンを選択し、SSMS と入力します。 一覧から **[Microsoft SQL Server Management Studio 18]** を選択します。  
+1. Windows の [スタート] ボタンを選択し、SSMS と入力します。 一覧から **[Microsoft SQL Server Management Studio]** を選択します。  
 
     ![画像 34](../images/dp-300-module-01-lab-34.png)
 
