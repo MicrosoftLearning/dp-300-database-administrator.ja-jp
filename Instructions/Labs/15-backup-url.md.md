@@ -121,7 +121,7 @@ AdventureWorks の DBA は、Azure で URL にデータベースをバックア�
     az storage container generate-sas -n "backups" --account-name "dp300backupstorage1234" --account-key "storage_key" --permissions "rwdl" --expiry "date_in_the_future" -o tsv
     ```
 
-    ここで **dp300backupstorage1234** はストレージ アカウントの作成時に使用された一意のストレージ アカウント名、**storage_key** は生成されたキー、**date_in_the_future** は現在より後の時間です。 **date_in_the_future** は UTC である必要があります。 たとえば、**2021-12-31T00:00Z** にします。これは、2020 年 12 月 31 日の午前 0 時に期限切れになるということです。
+    ここで **dp300backupstorage1234** はストレージ アカウントの作成時に使用された一意のストレージ アカウント名、**storage_key** は生成されたキー、**date_in_the_future** は現在より後の時間です。 **date_in_the_future** は UTC である必要があります。 たとえば、**2024-12-31T00:00Z** にします。これは、2024 年 12 月 31 日の午前 0 時に期限切れになるということです。
 
     出力は下のような内容を返します。 共有アクセス署名全体をコピーし、**メモ帳**に貼り付けてください。次のタスクで使用します。
 
@@ -217,7 +217,7 @@ AdventureWorks の DBA は、Azure で URL にデータベースをバックア�
 
     ![ストレージ アカウント内のバックアップされたファイルを示すスクリーンショット。](../images/dp-300-module-15-lab-12.png)
 
-1. **[バックアップ]** を選択します。
+1. **[backups]** を選択します。
 
     ![ストレージ アカウント内のバックアップされたファイルを示すスクリーンショット。](../images/dp-300-module-15-lab-13.png)
 

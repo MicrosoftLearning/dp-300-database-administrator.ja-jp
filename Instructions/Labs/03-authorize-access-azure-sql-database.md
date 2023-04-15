@@ -42,7 +42,7 @@ lab:
 
     ![サーバー名のコピー元を示すスクリーンショット](../images/dp-300-module-03-lab-05.png)
 
-1. SQL Server Management Studio を開いて、**[接続]********[データベース エンジン]** を選択します。 **[サーバー名]** に、サーバーの名前を貼り付けます。 認証の種類を **[Azure Active Directory - MFA で汎用]** に変更します。
+1. SQL Server Management Studio を開いて、**[接続]**>**[Database Engine]** を選択します。 **[サーバー名]** に、サーバーの名前を貼り付けます。 認証の種類を **[Azure Active Directory - Universal with MFA]** に変更します。
 
     ![[サーバーに接続] ダイアログのスクリーンショット](../images/dp-300-module-03-lab-06.png)
 

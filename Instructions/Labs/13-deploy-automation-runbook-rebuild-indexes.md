@@ -28,7 +28,7 @@ lab:
 
     ![[Automation アカウントの追加] 画面のスクリーンショット。](../images/dp-300-module-13-lab-02.png)
 
-1. [Review](レビュー) ページで、 **[Create](作成)** を選択します。
+1. [レビュー] ページで、 **[作成]** を選択します。
 
     ![[Automation アカウントの追加] 画面のスクリーンショット。](../images/dp-300-module-13-lab-29.png)
 
@@ -64,7 +64,7 @@ lab:
 
 1. クエリ エディターに戻り、 **[OK]** を選択して、データベースにサインインします。
 
-1. ブラウザーで新しいタブを開き、GitHub ページに移動して、[**AdaptativeIndexDefragmentation**](https://github.com/microsoft/tigertoolbox/blob/master/AdaptiveIndexDefrag/usp_AdaptiveIndexDefrag.sql) スクリプトにアクセスします。 次に、 **[未フォーマット]** を選択します。
+1. ブラウザーで新しいタブを開き、GitHub ページに移動して、[**AdaptativeIndexDefragmentation**](https://github.com/microsoft/tigertoolbox/blob/master/AdaptiveIndexDefrag/usp_AdaptiveIndexDefrag.sql) スクリプトにアクセスします。 次に、 **[Raw]** を選択します。
 
     ![GitHub で [Raw](未フォーマット) を選択しているスクリーンショット。](../images/dp-300-module-13-lab-08.png)
 
@@ -159,7 +159,7 @@ lab:
 
     ![Runbook を作成しているスクリーンショット。](../images/dp-300-module-13-lab-21.png)
 
-1. Runbook が作成されたら、以下の PowerShell コード スニペットをコピーして Runbook エディターに貼り付けます。 スクリプトの 1 行目に、上記の手順でコピーしたサーバー名を貼り付けます。 **[保存]** を選択してから、**[発行]** を選択します。
+1. Runbook が作成されたら、以下の PowerShell コード スニペットをコピーして Runbook エディターに貼り付けます。 スクリプトの 1 行目に、上記の手順でコピーしたサーバー名を貼り付けます。 **[保存]** を選択してから、**[公開]** を選択します。
 
     **メモ:** Runbook を保存する前に、コードが正しくコピーされていることを確認してください。
 
