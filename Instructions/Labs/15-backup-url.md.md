@@ -4,13 +4,13 @@ lab:
   module: Plan and implement a high availability and disaster recovery solution
 ---
 
-# <a name="backup-to-url"></a>Backup to URL
+# Backup to URL
 
 **推定所要時間:30 分**
 
 AdventureWorks の DBA は、Azure で URL にデータベースをバックアップし、人為的なエラーが発生した後、それを Azure BLOB ストレージから復元する必要があります。
 
-## <a name="restore-a-database"></a>データベースを復元する
+## データベースを復元する
 
 1. **https://github.com/MicrosoftLearning/dp-300-database-administrator/blob/master/Instructions/Templates/AdventureWorks2017.bak** にあるデータベース バックアップ ファイルをラボ仮想マシンの **C:\LabFiles\HADR** パスにダウンロードします (このフォルダー構造が存在しない場合は、作成します)。
 
@@ -24,7 +24,7 @@ AdventureWorks の DBA は、Azure で URL にデータベースをバックア�
 
     ![画像 02](../images/dp-300-module-07-lab-01.png)
 
-1. **Databases** フォルダーを選択し、 **[新しいクエリ]** を選択します。
+1. **Databases** フォルダーを選択し、 **[New Query]** を選択します。
 
     ![画像 03](../images/dp-300-module-07-lab-04.png)
 
@@ -46,7 +46,7 @@ AdventureWorks の DBA は、Azure で URL にデータベースをバックア�
 
     ![画像 03](../images/dp-300-module-07-lab-05.png)
 
-## <a name="configure-backup-to-url"></a>URL へのバックアップを構成する
+## URL へのバックアップを構成する
 
 1. ラボの仮想マシンからブラウザー セッションを開始し、[https://portal.azure.com](https://portal.azure.com/) に移動します。 このラボ仮想マシンの **[リソース]** タブで提供されている Azure の **[ユーザー名]** と **[パスワード]** を使用してポータルに接続します。
 
@@ -127,7 +127,7 @@ AdventureWorks の DBA は、Azure で URL にデータベースをバックア�
 
     ![共有アクセス署名キーのスクリーンショット。](../images/dp-300-module-15-lab-09.png)
 
-## <a name="create-credential"></a>資格情報の作成
+## 資格情報の作成
 
 機能が構成されたので、Azure ストレージ アカウントでバックアップ ファイルを BLOB として生成できます。
 
@@ -167,7 +167,7 @@ AdventureWorks の DBA は、Azure で URL にデータベースをバックア�
     DROP CREDENTIAL [https://<storage_account_name>.blob.core.windows.net/backups]  
     ```
 
-## <a name="backup-to-url"></a>Backup to URL
+## Backup to URL
 
 1. Transact-SQL で次のコマンドを使用して、データベース **AdventureWorks2017** を Azure にバックアップします。
 
@@ -187,7 +187,7 @@ AdventureWorks の DBA は、Azure で URL にデータベースをバックア�
 
     エラーが発生した場合は、資格情報の作成時に何も誤入力しなかったことと、すべてが正常に作成されたことを確認してください。
 
-## <a name="validate-the-backup-through-azure-cli"></a>Azure CLI を使用してバックアップを検証する
+## Azure CLI を使用してバックアップを検証する
 
 ファイルが実際に Azure にあることを確認するには、Storage Explorer (プレビュー) または Azure Cloud Shell を使用します。
 
@@ -205,7 +205,7 @@ AdventureWorks の DBA は、Azure で URL にデータベースをバックア�
 
     バックアップ ファイルが正常に生成されたことが確認できます。
 
-## <a name="validate-the-backup-through-storage-explorer"></a>Storage Explorer を使用してバックアップを検証する
+## Storage Explorer を使用してバックアップを検証する
 
 1. Storage Explorer (プレビュー) を使用するには、Azure portal のホームページから **[ストレージ アカウント]** を選択します。
 
@@ -217,7 +217,7 @@ AdventureWorks の DBA は、Azure で URL にデータベースをバックア�
 
     ![ストレージ アカウント内のバックアップされたファイルを示すスクリーンショット。](../images/dp-300-module-15-lab-12.png)
 
-1. **[バックアップ]** を選択します。
+1. **[backups]** を選択します。
 
     ![ストレージ アカウント内のバックアップされたファイルを示すスクリーンショット。](../images/dp-300-module-15-lab-13.png)
 
@@ -225,7 +225,7 @@ AdventureWorks の DBA は、Azure で URL にデータベースをバックア�
 
     ![ストレージ ブラウザー上のバックアップ ファイルを示すスクリーンショット。](../images/dp-300-module-15-lab-14.png)
 
-## <a name="restore-from-url"></a>URL から復元
+## URL から復元
 
 このタスクでは、Azure BLOB ストレージからデータベースを復元する方法について説明します。
 

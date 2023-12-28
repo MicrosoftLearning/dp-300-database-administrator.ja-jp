@@ -4,7 +4,7 @@ lab:
   module: Implement a Secure Environment for a Database Service
 ---
 
-# <a name="enable-microsoft-defender-for-sql-and-data-classification"></a>Microsoft Defender for SQL とデータ分類を有効にする
+# Microsoft Defender for SQL とデータ分類を有効にする
 
 **推定所要時間:20 分**
 
@@ -12,13 +12,13 @@ lab:
 
 データベース環境のセキュリティを確保するために、シニア データベース管理者として採用されました。 これらのタスクは Azure SQL Database に焦点を当てます。
 
-## <a name="enable-microsoft-defender-for-sql"></a>Microsoft Defender for SQL を有効にする
+## Microsoft Defender for SQL を有効にする
 
 1. ラボの仮想マシンからブラウザー セッションを開始し、[https://portal.azure.com](https://portal.azure.com/) に移動します。 このラボ仮想マシンの **[リソース]** タブで提供されている Azure の **[ユーザー名]** と **[パスワード]** を使用してポータルに接続します。
 
     ![画像 1](../images/dp-300-module-01-lab-01.png)
 
-1. Azure portal の上部にある検索ボックスで "SQL サーバー" を検索し、オプションの一覧から **[SQL サーバー]** をクリックします。
+1. Azure portal の上部にある検索ボックスで “SQL サーバー” を検索し、オプションの一覧から **SQL サーバー**をクリックします。
 
     ![自動的に生成されたソーシャル メディアの投稿についての説明のスクリーンショット](../images/dp-300-module-04-lab-1.png)
 
@@ -40,11 +40,9 @@ lab:
 
     ![[構成] オプションの選択のスクリーンショット](../images/dp-300-module-05-lab-02.png)
 
-1. **[サーバー設定]** ページで、 **[MICROSOFT DEFENDER FOR SQL]** の下のトグル スイッチが **[オン]** に設定され、**ストレージ アカウント**名が提供されていることがわかります。 **[スキャン レポートの送信先]** フィールドに Azure portal ログインに使用した Azure アカウントの電子メールを入力し、 **[保存]** を選択します。
+1. **[サーバー設定]** ページで、 **[MICROSOFT DEFENDER FOR SQL]** の下のトグル スイッチが **[オン]** に設定されていることを確認します。
 
-    ![[サーバー設定] ページのスクリーンショット](../images/dp-300-module-05-lab-03.png)
-
-## <a name="enable-data-classification"></a>データ分類を有効にする
+## データ分類を有効にする
 
 1. Azure SQL サーバーのメイン ブレードで、 **[設定]** セクションに移動し、 **[SQL データベース]** を選択し、データベース名を選択します。
 
@@ -58,7 +56,7 @@ lab:
 
     ![分類の推奨事項が表示されたスクリーンショット](../images/dp-300-module-05-lab-06.png)
 
-1. 次の **[データの検出と分類]** 画面で、**[すべて選択]** の横にあるチェック ボックスをオンにして、**[Accepted selected recommendations](選択した推奨設定を承諾)** を選択し、**[保存]** を選択して分類をデータベースに保存します。
+1. 次の **[データの検出と分類]** 画面で、**[すべて選択]** の横にあるチェック ボックスをオンにして、**[選択した推奨事項を受け入れます]** を選択し、**[保存]** を選択して分類をデータベースに保存します。
 
     ![[選択した推奨事項を受け入れます] を示すスクリーンショット](../images/dp-300-module-05-lab-07.png)
 

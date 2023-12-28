@@ -4,7 +4,7 @@ lab:
   module: Optimize query performance in Azure SQL
 ---
 
-# <a name="isolate-problem-areas-in-poorly-performing-queries-in-a-sql-database"></a>SQL Database で低パフォーマンス クエリの問題領域を分離する
+# SQL Database で低パフォーマンス クエリの問題領域を分離する
 
 **推定所要時間:30 分**
 
@@ -14,7 +14,7 @@ lab:
 
 **注:** これらの演習では、T-SQL コードをコピーして貼り付けるように求められます。 コードを実行する前に、コードを正しくコピーしていることを確認してください。
 
-## <a name="restore-a-database"></a>データベースを復元する
+## データベースを復元する
 
 1. **https://github.com/MicrosoftLearning/dp-300-database-administrator/blob/master/Instructions/Templates/AdventureWorks2017.bak** にあるデータベース バックアップ ファイルをラボ仮想マシンの **C:\LabFiles\Monitor and optimize** パス (存在しない場合は、このフォルダー構造を作成します) にダウンロードします。
 
@@ -28,7 +28,7 @@ lab:
 
     ![画像 02](../images/dp-300-module-07-lab-01.png)
 
-1. **Databases** フォルダーを選択し、 **[新しいクエリ]** を選択します。
+1. **Databases** フォルダーを選択し、 **[New Query]** を選択します。
 
     ![画像 03](../images/dp-300-module-07-lab-04.png)
 
@@ -50,11 +50,11 @@ lab:
 
     ![画像 03](../images/dp-300-module-07-lab-05.png)
 
-## <a name="generate-actual-execution-plan"></a>実際の実行プランを生成する
+## 実際の実行プランを生成する
 
 SQL Server Management Studio で実行プランを生成するには、いくつかの方法があります。
 
-1. **[新しいクエリ]** を選択します。 次の T-SQL コードをコピーして、クエリ ウィンドウに貼り付けます。 **[実行]** を選択してこのクエリを実行します。
+1. **[新しいクエリ]** を選択します。 次の T-SQL コードをコピーして、クエリ ウィンドウに貼り付けます。 **[Execute]** を選択してこのクエリを実行します。
 
     **注:** クエリの実行プランは、個別のタブにグラフィカルに表示するのではなく、**SHOWPLAN_ALL** を使用して、テキスト バージョンを結果ペインに表示します。
 
@@ -88,11 +88,11 @@ SQL Server Management Studio で実行プランを生成するには、いくつ
 
     クエリ オプティマイザーは、必要なレコードをフェッチするために適切なインデックスを見つけることができました。
 
-## <a name="resolve-a-suboptimal-query-plan"></a>最適でないクエリ プランを解決する
+## 最適でないクエリ プランを解決する
 
 1. 次のコードをコピーして、新しいクエリ ウィンドウに貼り付けます。
 
-    クエリを実行する前に、次に示すように **[実際の実行プランを含める]** アイコンを選択するか、<kbd>Ctrl</kbd>****<kbd>M</kbd> キーを押します。 **[実行]** を選択するか、<kbd>F5</kbd> キーを押して、クエリを実行します。 実行プランと、[メッセージ] タブの論理読み取り数を記録しておきます。
+    クエリを実行する前に、次に示すように **[実際の実行プランを含める]** アイコンを選択するか、<kbd>Ctrl</kbd> + <kbd>M</kbd> キーを押します。 **[Execute]** を選択するか、<kbd>F5</kbd> キーを押して、クエリを実行します。 実行プランと、[メッセージ] タブの論理読み取り数を記録しておきます。
 
     ```sql
     SET STATISTICS IO, TIME ON;
@@ -104,7 +104,7 @@ SQL Server Management Studio で実行プランを生成するには、いくつ
 
     ![クエリの実行プランを示すスクリーンショット](../images/dp-300-module-10-lab-02.png)
 
-    実行プランを確認すると、**キー参照**があることがわかります。 そのアイコンをマウスでポイントすると、クエリによって取得された行ごとにそれが実行されることがプロパティで示されます。 実行プランで**キー参照**操作が実行されていることを確認できます。
+    実行プランを確認すると、**Key Lookup**があることがわかります。 そのアイコンをマウスでポイントすると、クエリによって取得された行ごとにそれが実行されることがプロパティで示されます。 実行プランで**Key Lookup**操作が実行されていることを確認できます。
 
     ![列の出力リストを示すスクリーンショット](../images/dp-300-module-10-lab-03.png)
 
@@ -135,11 +135,11 @@ SQL Server Management Studio で実行プランを生成するには、いくつ
 
     ![改善された実行プランを示すスクリーンショット](../images/dp-300-module-10-lab-05.png)
 
-## <a name="use-query-store-to-detect-and-handle-regression"></a>クエリ ストアを使用して回帰を検出して処理する
+## クエリ ストアを使用して回帰を検出して処理する
 
 次に、ワークロードを実行して、クエリ ストアのクエリ統計を生成し、**リソースを消費するクエリの上位**レポートを調べて低パフォーマンスを特定し、より優れた実行プランを強制する方法を確認します。
 
-1. **[新しいクエリ]** を選択します。 次の T-SQL コードをコピーして、クエリ ウィンドウに貼り付けます。 **[実行]** を選択してこのクエリを実行します。
+1. **[New Query]** を選択します。 次の T-SQL コードをコピーして、クエリ ウィンドウに貼り付けます。 **[Execute]** を選択してこのクエリを実行します。
 
     このスクリプトにより、クエリ ストア機能が AdventureWorks2017 データベースに対して有効になり、データベースの互換レベルが 100 に設定されます。
 
@@ -163,17 +163,17 @@ SQL Server Management Studio で実行プランを生成するには、いくつ
 
 1. **https://github.com/MicrosoftLearning/dp-300-database-administrator/blob/master/Instructions/Templates/ExecuteRandomWorkload.sql** にある T-SQL スクリプトをラボの仮想マシンの **C:\LabFiles\Monitor and optimize** パスにダウンロードします。
 
-1. SQL Server Management Studio で **[ファイル]********[開く]********[ファイル]** を選択します。
+1. SQL Server Management Studio で **[ファイル]** > **[開く]** > **[ファイル]** を選択します。
 
 1. **C:\LabFiles\Monitor and optimize\CreateRandomWorkloadGenerator.sql** ファイルに移動します。
 
-1. SQL Server Management Studio で開いたら、 **[実行]** を選択するか、<kbd>F5</kbd> キーを押してクエリを実行します。
+1. SQL Server Management Studio で開いたら、 **[Execute]** を選択するか、<kbd>F5</kbd> キーを押してクエリを実行します。
 
-1. 新しいクエリ エディターで、ファイル **C:\LabFiles\Monitor and optimize\ExecuteRandomWorkload.sql**を開き、 **[実行]** を選択するか、<kbd>F5</kbd> キーを押してクエリを実行します。
+1. 新しいクエリ エディターで、ファイル **C:\LabFiles\Monitor and optimize\ExecuteRandomWorkload.sql**を開き、 **[Execute]** を選択するか、<kbd>F5</kbd> キーを押してクエリを実行します。
 
 1. 実行が完了したら、スクリプトをもう一度実行して、サーバーにさらに負荷を加えます。 このクエリのクエリ タブは開いたままにします。
 
-1. 次のコードをコピーして新しいクエリ ウィンドウに貼り付け、**[実行]** を選択するか、<kbd>F5</kbd> キーを押して実行します。 
+1. 次のコードをコピーして新しいクエリ ウィンドウに貼り付け、**[Execute]** を選択するか、<kbd>F5</kbd> キーを押して実行します。 
 
     このスクリプトにより、データベース互換モードが SQL Server 2019 (**150**) に変更されます。 これで、SQL Server 2008 以降のすべての機能と機能強化をデータベースで使用できるようになりました。
 
@@ -187,7 +187,7 @@ SQL Server Management Studio で実行プランを生成するには、いくつ
 
 1. **ExecuteRandomWorkload.sql** ファイルからクエリ タブに戻り、もう一度実行します。
 
-## <a name="examine-top-resource-consuming-queries-report"></a>リソースを消費する上位のクエリのレポートを調べる
+## リソースを消費する上位のクエリのレポートを調べる
 
 1. クエリ ストア ノードを表示するには、SQL Server Management Studio で AdventureWorks2017 データベースを更新する必要があります。 データベース名を右クリックし、 **[更新]** を選択します。 データベースの下に [クエリ ストア] ノードが表示されます。
 
@@ -211,7 +211,7 @@ SQL Server Management Studio で実行プランを生成するには、いくつ
 
     これにより、クエリ ストア内の最長クエリのクエリとプランの概要が表示されます。
 
-## <a name="force-a-better-execution-plan"></a>より適切な実行プランを強制する
+## より適切な実行プランを強制する
 
 1. 次に示すように、レポートのプラン概要部分に移動します。 期間が大きく異なる 2 つの実行プランがあることに注意してください。
 
@@ -227,13 +227,13 @@ SQL Server Management Studio で実行プランを生成するには、いくつ
 
     クエリ オプティマイザーによって使用するように選択された実行プランが、適切ではない場合があります。 このような状況が発生した場合、パフォーマンスがもっとよいプランがわかっているときは、それを使用するように SQL Server に強制することができます。
 
-## <a name="use-query-hints-to-impact-performance"></a>クエリ ヒントを使用してパフォーマンスに影響を与えます
+## クエリ ヒントを使用してパフォーマンスに影響を与えます
 
 次に、ワークロードを実行し、パラメーターを使用するようにクエリを変更し、クエリ ヒントをクエリに適用して、再実行します。
 
 演習を続ける前に、**[ウィンドウ]** メニューを選択して現在のクエリ ウィンドウをすべて閉じ、**[すべてのドキュメントを閉じる]** を選択します。 ポップアップで **[いいえ]** を選択します。
 
-1. **[新しいクエリ]** を選択し、クエリを実行する前に **[実際の実行プランを含める]** アイコンを選択するか、<kbd>CTRL</kbd> + <kbd>M</kbd> キーを使用します。
+1. **[New Query]** を選択し、クエリを実行する前に **[実際の実行プランを含める]** アイコンを選択するか、<kbd>CTRL</kbd> + <kbd>M</kbd> キーを使用します。
 
     ![[実際の実行プランを含める]](../images/dp-300-module-10-lab-13.png)
 
@@ -271,7 +271,7 @@ SQL Server Management Studio で実行プランを生成するには、いくつ
 
 このクエリでは `WHERE` 句で定数が使用されているため、オプティマイザーでは、これらのクエリはそれぞれ一意と見なされ、毎回異なる実行プランが生成されます。
 
-## <a name="change-the-query-to-use-a-variable-and-use-a-query-hint"></a>変数とクエリ ヒントを使用するようにクエリを変更する
+## 変数とクエリ ヒントを使用するようにクエリを変更する
 
 1. SalesPersonID に変数値を使用するようにクエリを変更します。
 

@@ -4,7 +4,7 @@ lab:
   module: Optimize query performance in Azure SQL
 ---
 
-# <a name="identify-database-design-issues"></a>データベース設計の問題を特定する
+# データベース設計の問題を特定する
 
 **推定所要時間: 15 分**
 
@@ -14,7 +14,7 @@ lab:
 
 **注:** これらの演習では、T-SQL コードをコピーして貼り付けるように求められます。 コードを実行する前に、コードを正しくコピーしていることを確認してください。
 
-## <a name="restore-a-database"></a>データベースを復元する
+## データベースを復元する
 
 1. **https://github.com/MicrosoftLearning/dp-300-database-administrator/blob/master/Instructions/Templates/AdventureWorks2017.bak** にあるデータベース バックアップ ファイルをラボ仮想マシンの **C:\LabFiles\Monitor and optimize** パス (存在しない場合は、このフォルダー構造を作成します) にダウンロードします。
 
@@ -28,7 +28,7 @@ lab:
 
     ![画像 02](../images/dp-300-module-07-lab-01.png)
 
-1. **Databases** フォルダーを選択し、 **[新しいクエリ]** を選択します。
+1. **Databases** フォルダーを選択し、 **[New Query]** を選択します。
 
     ![画像 03](../images/dp-300-module-07-lab-04.png)
 
@@ -50,7 +50,7 @@ lab:
 
     ![画像 03](../images/dp-300-module-07-lab-05.png)
 
-## <a name="examine-the-query-and-identify-the-problem"></a>クエリを調べて問題を識別する
+## クエリを調べて問題を識別する
 
 1. **[新しいクエリ]** を選択します。 次の T-SQL コードをコピーして、クエリ ウィンドウに貼り付けます。 **[実行]** を選択してこのクエリを実行します。
 
@@ -71,7 +71,7 @@ lab:
 
     ![画像 02](../images/dp-300-module-09-lab-02.png)
 
-## <a name="identify-ways-to-fix-the-warning-message"></a>警告の問題を解決する方法を特定する
+## 警告の問題を解決する方法を特定する
 
 *[HumanResources].[Employee]* テーブルの構造は、次のデータ定義言語 (DDL) ステートメントで示されます。 前の SQL クエリで使用されているフィールドを、その型に注意しながらこの DDL で確認します。
 
@@ -113,7 +113,7 @@ CREATE TABLE [HumanResources].[Employee](
 
 暗黙的な変換の警告を修正するために実装できる方法が 2 つあります。 次の手順では、これらの各方法を調査します。
 
-### <a name="change-the-code"></a>コードを変更する
+### コードを変更する
 
 1. 暗黙の変換を解決するには、コードをどのように変更しますか? コードを変更し、クエリを再実行します。
 
@@ -133,7 +133,7 @@ CREATE TABLE [HumanResources].[Employee](
 
     **注:** 警告メッセージが消え、クエリ プランが改善されています。 *NationalIDNumber* 列と比較される値がテーブル内の列のデータ型と一致するように `WHERE` 句を変更すると、オプティマイザーでの暗黙的な変換を取り除くことができました。
 
-### <a name="change-the-data-type"></a>データ型を変更する
+### データ型を変更する
 
 1. テーブル構造を変更することで、暗黙的な変換の警告を修正することもできます。
 

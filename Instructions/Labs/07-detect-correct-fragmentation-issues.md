@@ -4,7 +4,7 @@ lab:
   module: Monitor and optimize operational resources in Azure SQL
 ---
 
-# <a name="detect-and-correct-fragmentation-issues"></a>断片化の問題を検出して修正する
+# 断片化の問題を検出して修正する
 
 **推定所要時間: 15 分**
 
@@ -14,7 +14,7 @@ lab:
 
 **メモ:** これらの演習で、T-SQL コードをコピーして貼り付けるように求められます。 コードを実行する前に、コードを正しくコピーしていることを確認してください。
 
-## <a name="restore-a-database"></a>データベースを復元する
+## データベースを復元する
 
 1. **https://github.com/MicrosoftLearning/dp-300-database-administrator/blob/master/Instructions/Templates/AdventureWorks2017.bak** にあるデータベース バックアップ ファイルをラボ仮想マシンの **C:\LabFiles\Monitor and optimize** パス (存在しない場合は、このフォルダー構造を作成します) にダウンロードします。
 
@@ -28,7 +28,7 @@ lab:
 
     ![画像 02](../images/dp-300-module-07-lab-01.png)
 
-1. **Databases** フォルダーを選択し、 **[新しいクエリ]** を選択します。
+1. **Databases** フォルダーを選択し、 **[New Query]** を選択します。
 
     ![画像 03](../images/dp-300-module-07-lab-04.png)
 
@@ -50,7 +50,7 @@ lab:
 
     ![画像 03](../images/dp-300-module-07-lab-05.png)
 
-## <a name="investigate-index-fragmentation"></a>インデックスの断片化を調査する
+## インデックスの断片化を調査する
 
 1. **[新しいクエリ]** を選択します。 次の T-SQL コードをコピーして、クエリ ウィンドウに貼り付けます。 **[実行]** を選択してこのクエリを実行します。
 
@@ -129,7 +129,7 @@ lab:
 
     ![画像 03](../images/dp-300-module-07-lab-07.png)
 
-## <a name="rebuild-fragmented-indexes"></a>断片化されたインデックスを再構築する
+## 断片化されたインデックスを再構築する
 
 1. 次の T-SQL コードをコピーして、クエリ ウィンドウに貼り付けます。 **[実行]** を選択してこのクエリを実行します。
 

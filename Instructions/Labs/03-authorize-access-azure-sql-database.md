@@ -4,7 +4,7 @@ lab:
   module: Implement a Secure Environment for a Database Service
 ---
 
-# <a name="configure-database-authentication-and-authorization"></a>データベースの認証と承認を構成する
+# データベースの認証と承認を構成する
 
 **推定所要時間:20 分**
 
@@ -14,7 +14,7 @@ lab:
 
 **注:** これらの演習では、T-SQL コードをコピーして貼り付けるように求められます。 コードを実行する前に、コードが正しくコピーされていることを確認してください。
 
-## <a name="authorize-access-to-azure-sql-database-with-azure-active-directory"></a>Azure Active Directory を使用して Azure SQL Database へのアクセスを承認する
+## Azure Active Directory を使用して Azure SQL Database へのアクセスを承認する
 
 1. ラボの仮想マシンからブラウザー セッションを開始し、[https://portal.azure.com](https://portal.azure.com/) に移動します。 このラボ仮想マシンの **[リソース]** タブで提供されている Azure の **[ユーザー名]** と **[パスワード]** を使用してポータルに接続します。
 
@@ -42,7 +42,7 @@ lab:
 
     ![サーバー名のコピー元を示すスクリーンショット](../images/dp-300-module-03-lab-05.png)
 
-1. SQL Server Management Studio を開いて、**[接続]********[データベース エンジン]** を選択します。 **[サーバー名]** に、サーバーの名前を貼り付けます。 認証の種類を **[Azure Active Directory - MFA で汎用]** に変更します。
+1. SQL Server Management Studio を開いて、**[接続]** > **[データベース エンジン]** を選択します。 **[サーバー名]** に、サーバーの名前を貼り付けます。 認証の種類を **[Azure Active Directory - MFA で汎用]** に変更します。
 
     ![[サーバーに接続] ダイアログのスクリーンショット](../images/dp-300-module-03-lab-06.png)
 
@@ -54,7 +54,7 @@ lab:
 > Azure SQL データベースへの初回サインイン試行時に、クライアントの IP アドレスをファイアウォールに追加する必要があります。 これは、SQL Server Management Studio によって自動的に行われます。 Azure portal の **[リソース]** タブから入手した**パスワード**を使用して **[サインイン]** を選択し、Azure の資格情報を選択して **[OK]** を選択します。
 > ![クライアントの IP アドレスを追加する画面のスクリーンショット](../images/dp-300-module-03-lab-07.png)
 
-## <a name="manage-access-to-database-objects"></a>データベース オブジェクトへのアクセスを管理する
+## データベース オブジェクトへのアクセスを管理する
 
 このタスクでは、データベースとそのオブジェクトへのアクセスを管理します。 まず、*AdventureWorksLT* データベースに 2 人のユーザーを作成します。
 

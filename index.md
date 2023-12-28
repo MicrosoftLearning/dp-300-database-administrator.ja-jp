@@ -4,7 +4,7 @@ permalink: index.html
 layout: home
 ---
 
-# <a name="database-administration-exercises"></a>データベース管理の演習
+# データベース管理の演習
 
 これらの演習では、Microsoft コース [DP-300: Microsoft Azure SQL ソリューションの管理](https://docs.microsoft.com/training/courses/dp-300t00)がサポートされています。
 
