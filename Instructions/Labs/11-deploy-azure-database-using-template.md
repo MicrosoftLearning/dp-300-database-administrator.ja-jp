@@ -4,13 +4,13 @@ lab:
   module: Automate database tasks for Azure SQL
 ---
 
-# <a name="deploy-an-azure-sql-database-from-a-template"></a>テンプレートから Azure SQL Database をデプロイする
+# テンプレートから Azure SQL Database をデプロイする
 
 **推定所要時間: 15 分**
 
 あなたはデータベース管理の日常業務を自動化するために、シニア データ エンジニアとして採用されています。 この自動化はピーク時のパフォーマンスで AdventureWorks のデータベースの稼働を確実に続けるうえで役に立つだけでなく、特定の条件に基づいてアラートを生成することもできるようにします。 AdventureWorks では、サービスとしてのインフラストラクチャ (IaaS) とサービスとしてのプラットフォーム (PaaS) の両方のオファリングで SQL Server が使用されています。
 
-## <a name="explore-azure-resource-manager-template"></a>Azure Resource Manager テンプレートを探索する
+## Azure Resource Manager テンプレートを探索する
 
 1. Microsoft Edge で新しいタブを開き、GitHub リポジトリ内の次のパスに移動します。ここには、SQL Database リソースをデプロイするための ARM テンプレートが含まれています
 

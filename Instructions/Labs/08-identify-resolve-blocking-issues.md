@@ -4,7 +4,7 @@ lab:
   module: Optimize query performance in Azure SQL
 ---
 
-# <a name="identify-and-resolve-blocking-issues"></a>障害となっている問題を特定して解決する
+# 障害となっている問題を特定して解決する
 
 **推定所要時間: 15 分**
 
@@ -14,7 +14,7 @@ lab:
 
 **注:** これらの演習では、T-SQL コードをコピーして貼り付けるように求められます。 コードを実行する前に、コードを正しくコピーしていることを確認してください。
 
-## <a name="restore-a-database"></a>データベースを復元する
+## データベースを復元する
 
 1. **https://github.com/MicrosoftLearning/dp-300-database-administrator/blob/master/Instructions/Templates/AdventureWorks2017.bak** にあるデータベース バックアップ ファイルをラボ仮想マシンの **C:\LabFiles\Monitor and optimize** パス (存在しない場合は、このフォルダー構造を作成します) にダウンロードします。
 
@@ -28,7 +28,7 @@ lab:
 
     ![画像 02](../images/dp-300-module-07-lab-01.png)
 
-1. **Databases** フォルダーを選択し、 **[新しいクエリ]** を選択します。
+1. **Databases** フォルダーを選択し、 **[New Query]** を選択します。
 
     ![画像 03](../images/dp-300-module-07-lab-04.png)
 
@@ -50,9 +50,9 @@ lab:
 
     ![画像 03](../images/dp-300-module-07-lab-05.png)
 
-## <a name="run-blocked-queries-report"></a>ブロックされたクエリ レポートの実行
+## ブロックされたクエリ レポートの実行
 
-1. **[新しいクエリ]** を選択します。 次の T-SQL コードをコピーして、クエリ ウィンドウに貼り付けます。 **[実行]** を選択してこのクエリを実行します。
+1. **[New Query]** を選択します。 次の T-SQL コードをコピーして、クエリ ウィンドウに貼り付けます。 **[[Execute]** を選択してこのクエリを実行します。
 
     ```sql
     USE MASTER
@@ -83,7 +83,7 @@ lab:
     - T-SQL テキスト
     - ユーザー名
 
-1. **[新しいクエリ]** を選択します。 次の T-SQL コードをコピーして、クエリ ウィンドウに貼り付けます。 **[実行]** を選択してこのクエリを実行します。
+1. **[New Query]** を選択します。 次の T-SQL コードをコピーして、クエリ ウィンドウに貼り付けます。 **[Execute]** を選択してこのクエリを実行します。
 
     ```sql
     EXEC sys.sp_configure N'show advanced options', 1
@@ -96,7 +96,7 @@ lab:
 
     **注:** 上記のコマンドは、ブロックされたプロセスのレポートを生成するためのしきい値 (秒単位) を指定します。 そのため、このレッスンでは、*blocked_process_report* が発生するまで待つ必要はありません。
 
-1. **[新しいクエリ]** を選択します。 次の T-SQL コードをコピーして、クエリ ウィンドウに貼り付けます。 **[実行]** を選択してこのクエリを実行します。
+1. **[New Query]** を選択します。 次の T-SQL コードをコピーして、クエリ ウィンドウに貼り付けます。 **[Execute]** を選択してこのクエリを実行します。
 
     ```sql
     USE AdventureWorks2017
@@ -124,13 +124,13 @@ lab:
 
     **注:** このクエリは、結果を返すことなく無限に実行される可能性があります。
 
-1. **オブジェクト エクスプローラー**で、 **[管理]**  ->  **[拡張イベント]**  ->  **[セッション]** の順に展開します。
+1. **オブジェクト エクスプローラー**で、 **[Management]**  ->  **[Extended Events]**  ->  **[Sessions]** の順に展開します。
 
     先ほど作成した *Blocking* という名前の拡張イベントが一覧に表示されていることに注意してください。
 
     ![画像 01](../images/dp-300-module-08-lab-01.png)
 
-1. **[package0.ring_buffer]** を右クリックし、 **[ターゲット データの表示]** を選択します。
+1. **[package0.ring_buffer]** を右クリックし、 **[View Target Data]** を選択します。
 
     ![画像 02](../images/dp-300-module-08-lab-02.png)
 
@@ -166,11 +166,11 @@ lab:
 
     ![画像 05](../images/dp-300-module-08-lab-05.png)
 
-1. **Blocking** という名前の拡張イベントを右クリックし、 **[セッションの停止]** を選択します。
+1. **Blocking** という名前の拡張イベントを右クリックし、 **[Stop Session]** を選択します。
 
     ![画像 06](../images/dp-300-module-08-lab-06.png)
 
-1. ブロックの原因となっているクエリ セッションに戻り、クエリの下の行に「`ROLLBACK TRANSACTION`」 と入力します。 `ROLLBACK TRANSACTION` を強調表示し、 **[実行]** を選択します。
+1. ブロックの原因となっているクエリ セッションに戻り、クエリの下の行に「`ROLLBACK TRANSACTION`」 と入力します。 `ROLLBACK TRANSACTION` を強調表示し、 **[Execute]** を選択します。
 
     ![画像 07](../images/dp-300-module-08-lab-07.png)
 
@@ -178,9 +178,9 @@ lab:
 
     ![画像 08](../images/dp-300-module-08-lab-08.png)
 
-## <a name="enable-read-commit-snapshot-isolation-level"></a>読み取りコミット スナップショット分離レベルを有効にする
+## 読み取りコミット スナップショット分離レベルを有効にする
 
-1. SQL Server Management Studio で **[新しいクエリ]** を選択します。 次の T-SQL コードをコピーして、クエリ ウィンドウに貼り付けます。 **[実行]** ボタンを選択してこのクエリを実行します。
+1. SQL Server Management Studio で **[新しいクエリ]** を選択します。 次の T-SQL コードをコピーして、クエリ ウィンドウに貼り付けます。 **[Execute]** ボタンを選択してこのクエリを実行します。
 
     ```sql
     USE master

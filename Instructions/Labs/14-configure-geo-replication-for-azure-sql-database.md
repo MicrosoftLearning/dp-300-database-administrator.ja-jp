@@ -4,13 +4,13 @@ lab:
   module: Plan and implement a high availability and disaster recovery solution
 ---
 
-# <a name="configure-geo-replication-for-azure-sql-database"></a>Azure SQL Database 用に geo レプリケーションを構成する
+# Azure SQL Database 用に geo レプリケーションを構成する
 
 **推定所要時間:30 分**
 
 AdventureWorks 内の DBA として、Azure SQL Database の geo レプリケーションを有効にし、それが適切に機能していることを確認する必要があります。 さらに、ポータルを使用して別のリージョンに手動でフェールオーバーします。
 
-## <a name="enable-geo-replication"></a>geo レプリケーションを有効にする
+## geo レプリケーションを有効にする
 
 1. ラボの仮想マシンからブラウザー セッションを開始し、[https://portal.azure.com](https://portal.azure.com/) に移動します。 このラボ仮想マシンの **[リソース]** タブで提供されている Azure の **[ユーザー名]** と **[パスワード]** を使用してポータルに接続します。
 
@@ -59,7 +59,7 @@ AdventureWorks 内の DBA として、Azure SQL Database の geo レプリケー
 
     ![[確認および作成] ページを示すスクリーンショット。](../images/dp-300-module-14-lab-08.png)
 
-## <a name="failover-sql-database-to-a-secondary-region"></a>セカンダリ リージョンへの SQL Database のフェールオーバー
+## セカンダリ リージョンへの SQL Database のフェールオーバー
 
 これで Azure SQL Database レプリカが作成されたので、フェールオーバーを実行します。
 

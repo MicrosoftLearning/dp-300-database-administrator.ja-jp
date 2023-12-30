@@ -4,7 +4,7 @@ lab:
   module: Monitor and optimize operational resources in Azure SQL
 ---
 
-# <a name="isolate-performance-problems-through-monitoring"></a>監視を通じてパフォーマンスの問題を特定する
+# 監視を通じてパフォーマンスの問題を特定する
 
 **推定所要時間:30 分**
 
@@ -14,13 +14,13 @@ lab:
 
 **注:** これらの演習では、T-SQL コードをコピーして貼り付けるように求められます。 コードを実行する前に、コードが正しくコピーされていることを確認してください。
 
-## <a name="review-cpu-utilization-in-azure-portal"></a>Azure portal の CPU 使用率を確認する
+## Azure portal の CPU 使用率を確認する
 
 1. ラボの仮想マシンからブラウザー セッションを開始し、[https://portal.azure.com](https://portal.azure.com/) に移動します。 このラボ仮想マシンの **[リソース]** タブで提供されている Azure の **[ユーザー名]** と **[パスワード]** を使用してポータルに接続します。
 
     ![画像 1](../images/dp-300-module-01-lab-01.png)
 
-1. Azure portal の上部にある検索ボックスで "SQL サーバー" を検索し、オプションの一覧から **[SQL サーバー]** をクリックします。
+1. Azure portal の上部にある検索ボックスで “SQL サーバー” を検索し、オプションの一覧から **SQL サーバー**をクリックします。
 
     ![自動的に生成されたソーシャル メディアの投稿についての説明のスクリーンショット](../images/dp-300-module-04-lab-1.png)
 
@@ -85,7 +85,7 @@ lab:
 
     ![[メトリック] アイコンの選択を示すスクリーンショット](../images/dp-300-module-06-lab-07.png)
 
-1. **[CPU の割合]** を反映するように **[メトリック]** メニュー オプションを変更し、 **[平均]** の **[集計]** を選択します。これにより、特定の時間枠の CPU の割合の平均が表示されます。
+1. **[CPU  percentage]** を反映するように **[メトリック]** メニュー オプションを変更し、 **[平均]** の **[集計]** を選択します。これにより、特定の時間枠の CPU の割合の平均が表示されます。
 
     ![[CPU の割合] を示すスクリーンショット](../images/dp-300-module-06-lab-08.png)
 
@@ -93,7 +93,7 @@ lab:
 
     ![平均の集計を示すスクリーンショット](../images/dp-300-module-06-lab-09.png)
 
-## <a name="identify-high-cpu-queries"></a>CPU 使用率が高いクエリを特定する
+## CPU 使用率が高いクエリを特定する
 
 1. **AdventureWorksLT** データベースのウィンドウの **[インテリジェント パフォーマンス]** セクションで **[Query Performance Insight]** アイコンを見つけます。
 

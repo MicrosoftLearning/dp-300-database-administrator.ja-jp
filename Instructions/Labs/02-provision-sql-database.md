@@ -4,7 +4,7 @@ lab:
   module: Plan and Implement Data Platform Resources
 ---
 
-# <a name="provision-an-azure-sql-database"></a>Azure SQL Database をプロビジョニングする
+# Azure SQL Database をプロビジョニングする
 
 **推定所要時間: 40 分**
 
@@ -12,7 +12,7 @@ lab:
 
 AdventureWorks のデータベース管理者は、Virtual Network エンドポイントを含む新しい SQL データベースをセットアップして、デプロイのセキュリティを強化および簡略化します。 Azure Data Studio を使用して、データ クエリと結果保持のための SQL Notebook の使用を評価します。
 
-## <a name="navigate-on-azure-portal"></a>Azure portal に移動する
+## Azure portal に移動する
 
 1. ラボの仮想マシンからブラウザー セッションを開始し、[https://portal.azure.com](https://portal.azure.com/) に移動します。 このラボ仮想マシンの **[リソース]** タブで提供されている Azure の **[ユーザー名]** と **[パスワード]** を使用してポータルに接続します。
 
@@ -28,15 +28,13 @@ AdventureWorks のデータベース管理者は、Virtual Network エンドポ�
 
     ![画像 1](../images/dp-300-module-02-lab-46.png)
 
-## <a name="create-a-virtual-network"></a>仮想ネットワークを作成します
+## 仮想ネットワークを作成します
 
 1. Azure portal ホーム ページで、左側のメニューを選択します。  
 
     ![画像 2](../images/dp-300-module-02-lab-01_1.png)
 
 1. 左側のナビゲーション ペインで、 **[仮想ネットワーク]** をクリックします  
-
-    ![図 3](../images/dp-300-module-02-lab-04.png)
 
 1. **[+ 作成]** をクリックして **[仮想ネットワークの作成]** ページを開きます。 **[基本]** タブで次の情報を入力します。
 
@@ -45,23 +43,15 @@ AdventureWorks のデータベース管理者は、Virtual Network エンドポ�
     - **名前:** lab02-vnet
     - **リージョン:** リソース グループが作成されたのと同じリージョンを選択する
 
-    ![画像 2](../images/dp-300-module-02-lab-05.png)
+1. **[確認と作成]** をクリックし、新しい仮想ネットワークの設定を確認して、 **[作成]** をクリックします。
 
-1. **[次: IP アドレス]** をクリックします。  
+1. 作成された仮想ネットワークに移動して Azure SQL データべース エンドポイントの仮想ネットワークの IP 範囲を構成し、 **[設定]** ペインの **[サブネット]** をクリックします。
 
-    ![図 3](../images/dp-300-module-02-lab-06.png)
+1. **[default]** のサブネット リンクをクリックします。 表示される**サブネット アドレス範囲**は異なる場合があります。
 
-1. 次のように、Azure SQL データベース エンドポイントの仮想ネットワークの IP 範囲を構成します。
+1. 右側の **[サブネットの編集]** ペインで、 **[サービス]** ドロップダウンを展開し、**Microsoft.Sql** を選択します。 **[保存]** を選択します。
 
-    - **[IP アドレス]** タブで、IPv4 アドレスを既定値のままにします。
-    - **[既定値]** のサブネット リンクをクリックします。 表示されるサブネット アドレス範囲は異なる場合があります。
-
-        ![画像 4](../images/dp-300-module-02-lab-07.png)
-
-    - 右側の **[サブネットの編集]** ペインで、 **[サービス]** ドロップダウンを展開し、**Microsoft.Sql** を選択します。 **[保存]** を選択します。
-    - **[確認と作成]** ボタンをクリックし、新しい仮想ネットワークの設定を確認して、 **[作成]** をクリックします。
-
-## <a name="provision-an-azure-sql-database"></a>Azure SQL Database をプロビジョニングする
+## Azure SQL Database をプロビジョニングする
 
 1. Azure portal の上部にある検索ボックスで “SQL データベース” を検索し、オプションの一覧から **SQL データベース**をクリックします。
 
@@ -71,7 +61,7 @@ AdventureWorks のデータベース管理者は、Virtual Network エンドポ�
 
     ![画像 6](../images/dp-300-module-02-lab-10_1.png)
 
-1. **[SQL データベースの作成]** ページの **[基本]** タブで次のオプションを選択し、 **[次へ: ネットワーク]** をクリックします。
+1. **[SQL データベースの作成]** ページの **[Basics]** タブで次のオプションを選択し、 **[次へ: ネットワーク]** をクリックします。
 
     - **サブスクリプション:** &lt;自分のサブスクリプション&gt;
     - **リソース グループ:** *contoso-rg* で始まる
@@ -136,7 +126,7 @@ AdventureWorks のデータベース管理者は、Virtual Network エンドポ�
 
 1. デプロイが完了したら、 **[リソースに移動]** をクリックします。
 
-## <a name="enable-access-to-an-azure-sql-database"></a>Azure SQL Database へのアクセスを有効にする
+## Azure SQL Database へのアクセスを有効にする
 
 1. **[SQL データベース]** ページで **[概要]** セクションを選択し、上部セクション内のサーバー名のリンクを選択します。
 
@@ -146,11 +136,11 @@ AdventureWorks のデータベース管理者は、Virtual Network エンドポ�
 
     ![画像 14](../images/dp-300-module-02-lab-20.png)
 
-1. **[パブリック アクセス]** タブで **[選択されたネットワーク]** を選択し、 **[Azure サービスおよびリソースにこのサーバーへのアクセスを許可する]** プロパティをオンにします。 **[保存]** をクリックします。
+1. **[パブリック アクセス]** タブで **[選択したネットワーク]** を選択し、 **[Azure サービスおよびリソースにこのサーバーへのアクセスを許可する]** プロパティをオンにします。 **[保存]** をクリックします。
 
     ![画像 15](../images/dp-300-module-02-lab-21.png)
 
-## <a name="connect-to-an-azure-sql-database-in-azure-data-studio"></a>Azure Data Studio で Azure SQL Database に接続する
+## Azure Data Studio で Azure SQL Database に接続する
 
 1. ラボ仮想マシンから Azure Data Studio を起動します。
 
@@ -170,7 +160,7 @@ AdventureWorks のデータベース管理者は、Virtual Network エンドポ�
     - ユーザー名: **dp300admin**
     - パスワード: **dp300P@ssword!**
     - [データベース] ドロップダウンを展開して **AdventureWorksLT** を選択します。 
-        - **注:** クライアント IP がこのサーバーにアクセスできるようにするあめにファイアウォールKI足を追加するよう求められることがあります。 ファイアウォール規則を追加するように求められた場合は、 **[アカウントの追加]** をクリックして、Azure アカウントにログインします。 **[新しいファイアウォール規則を作成する]** 画面で、 **[OK]** をクリックします。
+        - **注:** クライアント IP がこのサーバーにアクセスできるようにするためにファイアウォール規則を追加するよう求められることがあります。 ファイアウォール規則を追加するように求められた場合は、 **[アカウントの追加]** をクリックして、Azure アカウントにログインします。 **[新しいファイアウォール規則を作成する]** 画面で、 **[OK]** をクリックします。
 
         ![画像 18](../images/dp-300-module-02-lab-26.png)
 
@@ -180,7 +170,7 @@ AdventureWorks のデータベース管理者は、Virtual Network エンドポ�
 
     接続　サイドバーに戻り、接続の詳細を入力し続けます。  
 
-    - [サーバー グループ] は **&lt;既定値&gt;** のままです
+    - [サーバー グループ] は **&lt;Default&gt;** のままです
     - [名前 (省略可能)] では、必要に応じてデータベースのフレンドリ名を指定できます
     - 設定を確認し、 **[接続]** をクリックします  
 
@@ -190,7 +180,7 @@ AdventureWorks のデータベース管理者は、Virtual Network エンドポ�
 
     ![画像 20](../images/dp-300-module-02-lab-28.png)
 
-## <a name="query-an-azure-sql-database-with-a-sql-notebook"></a>SQL ノートブックを使用して Azure SQL Database へのクエリを実行する
+## SQL ノートブックを使用して Azure SQL Database へのクエリを実行する
 
 1. このラボの AdventureWorksLT データベースに接続されている Azure Data Studio で、 **[新しいノートブック]** ボタンをクリックします。
 

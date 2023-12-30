@@ -4,13 +4,13 @@ lab:
   module: Automate database tasks for Azure SQL
 ---
 
-# <a name="deploy-an-automation-runbook-to-automatically-rebuild-indexes"></a>Automation Runbook をデプロイして、インデックスを自動的に再構築する
+# Automation Runbook をデプロイして、インデックスを自動的に再構築する
 
 **推定所要時間:30 分**
 
 あなたは、データベース管理の日常業務自動化を支援するシニア データベース管理者として採用されました。 この自動化はピーク時のパフォーマンスで AdventureWorks のデータベースの稼働を確実に続けるうえで役に立つだけでなく、特定の条件に基づいてアラートを生成することもできるようにします。 AdventureWorks では、サービスとしてのインフラストラクチャ (IaaS) とサービスとしてのプラットフォーム (PaaS) の両方のオファリングで SQL Server を利用しています。
 
-## <a name="create-an-automation-account"></a>Automation アカウントを作成する
+## Automation アカウントを作成する
 
 1. ラボの仮想マシンからブラウザー セッションを開始し、[https://portal.azure.com](https://portal.azure.com/) に移動します。 このラボ仮想マシンの **[リソース]** タブで提供されている Azure の **[ユーザー名]** と **[パスワード]** を使用してポータルに接続します。
 
@@ -22,20 +22,20 @@ lab:
 
 1. **[Automation アカウントの作成]** ページで、次の詳細を入力して、 **[確認と作成]** を選択します。
 
-    - **リソース グループ:** *automateLab* で始まる
+    - **リソース グループ:** &lt;お使いのリソース グループ&gt;
     - **名前:** autoAccount
     - **場所:** 既定値を使用します。
 
     ![[Automation アカウントの追加] 画面のスクリーンショット。](../images/dp-300-module-13-lab-02.png)
 
-1. [Review](レビュー) ページで、 **[Create](作成)** を選択します。
+1. [レビュー] ページで、 **[作成]** を選択します。
 
     ![[Automation アカウントの追加] 画面のスクリーンショット。](../images/dp-300-module-13-lab-29.png)
 
     > [!NOTE]
     > Automation アカウントは約 3 分で作成されます。
 
-## <a name="connect-to-an-existing-azure-sql-database"></a>既存の Azure SQL Database に接続する
+## 既存の Azure SQL Database に接続する
 
 1. Azure portal 内で、「**sql データベース**」を検索して、自分のデータベースに移動します。
 
@@ -64,7 +64,7 @@ lab:
 
 1. クエリ エディターに戻り、 **[OK]** を選択して、データベースにサインインします。
 
-1. ブラウザーで新しいタブを開き、GitHub ページに移動して、[**AdaptativeIndexDefragmentation**](https://github.com/microsoft/tigertoolbox/blob/master/AdaptiveIndexDefrag/usp_AdaptiveIndexDefrag.sql) スクリプトにアクセスします。 次に、 **[未フォーマット]** を選択します。
+1. ブラウザーで新しいタブを開き、GitHub ページに移動して、[**AdaptativeIndexDefragmentation**](https://github.com/microsoft/tigertoolbox/blob/master/AdaptiveIndexDefrag/usp_AdaptiveIndexDefrag.sql) スクリプトにアクセスします。 次に、 **[Raw]** を選択します。
 
     ![GitHub で [Raw](未フォーマット) を選択しているスクリーンショット。](../images/dp-300-module-13-lab-08.png)
 
@@ -85,7 +85,7 @@ lab:
 
     ![新しいストアド プロシージャのスクリーンショット。](../images/dp-300-module-13-lab-10.png)
 
-## <a name="configure-automation-account-assets"></a>Automation アカウント資産を構成する
+## Automation アカウント資産を構成する
 
 次の手順で、Runbook の作成準備として必要な資産を構成します。 次に、**[Automation アカウント]** を選択します。
 
@@ -126,7 +126,7 @@ lab:
 
     ![アカウント資格情報の追加のスクリーンショット。](../images/dp-300-module-13-lab-18.png)
 
-## <a name="create-a-powershell-runbook"></a>PowerShell Runbook を作成する
+## PowerShell Runbook を作成する
 
 1. Azure portal 内で、「**sql データベース**」を検索して、自分のデータベースに移動します。
 
@@ -159,7 +159,7 @@ lab:
 
     ![Runbook を作成しているスクリーンショット。](../images/dp-300-module-13-lab-21.png)
 
-1. Runbook が作成されたら、以下の PowerShell コード スニペットをコピーして Runbook エディターに貼り付けます。 スクリプトの 1 行目に、上記の手順でコピーしたサーバー名を貼り付けます。 **[保存]** を選択してから、**[発行]** を選択します。
+1. Runbook が作成されたら、以下の PowerShell コード スニペットをコピーして Runbook エディターに貼り付けます。 スクリプトの 1 行目に、上記の手順でコピーしたサーバー名を貼り付けます。 **[保存]** を選択してから、**[公開]** を選択します。
 
     **メモ:** Runbook を保存する前に、コードが正しくコピーされていることを確認してください。
 
@@ -179,7 +179,7 @@ lab:
 
     ![Runbook 作成の成功メッセージのスクリーンショット。](../images/dp-300-module-13-lab-23.png)
 
-## <a name="create-a-schedule-for-a-runbook"></a>Runbook のスケジュールの作成
+## Runbook のスケジュールの作成
 
 次に、Runbook をスケジュールして定期的に実行されるようにします。
 

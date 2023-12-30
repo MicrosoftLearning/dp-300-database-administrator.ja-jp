@@ -4,7 +4,7 @@ lab:
   module: Plan and Implement Data Platform Resources
 ---
 
-# <a name="provision-a-sql-server-on-an-azure-virtual-machine"></a>Azure 仮想マシンで SQL Server をプロビジョニングする
+# Azure 仮想マシンで SQL Server をプロビジョニングする
 
 **推定所要時間:30 分**
 
@@ -12,7 +12,7 @@ lab:
 
 あなたは、AdventureWorks のデータベース管理者です。 あなたは、概念実証で使用するためのテスト環境を作成する必要があります。 概念実証では、Azure Virtual Machine で SQL Server を使用し、AdventureWorksDW データベースのバックアップを使用します。 仮想マシンをセットアップし、データベースを復元し、クエリを実行して、使用可能であることを確認する必要があります。
 
-## <a name="deploy-a-sql-server-on-an-azure-virtual-machine"></a>Azure 仮想マシンで SQL Server をデプロイする
+## Azure 仮想マシンで SQL Server をデプロイする
 
 1. ラボの仮想マシンからブラウザー セッションを開始して [https://portal.azure.com](https://portal.azure.com/) に移動し、お使いの Azure サブスクリプションに関連付けられている Microsoft アカウントを使用してサインインします。
 
@@ -26,7 +26,7 @@ lab:
 
     ![画像 10](../images/dp-300-module-01-lab-10.png)
 
-1. **[SQL デプロイ オプションを選択する]** ウィンドウで、 **[SQL 仮想マシン]** の下のドロップダウン ボックスをクリックします。 **[無料の SQL Server ライセンス: Windows Server 2022 上の SQL 2019 Developer]** というラベルの付いたオプションを選択します。 **[作成]** を選択します。
+1. **[SQL デプロイ オプションを選択する]** ウィンドウで、 **[SQL 仮想マシン]** の下のドロップダウン ボックスをクリックします。 **[Free SQL Server License: SQL 2019 Developer on Windows Server 2022]** というラベルの付いたオプションを選択します。 **[作成]** を選択します。
 
     ![画像 11](../images/dp-300-module-01-lab-11.png)
 
@@ -87,7 +87,7 @@ lab:
 
     ![画像 20](../images/dp-300-module-01-lab-20.png)
 
-## <a name="connect-to-sql-server-on-an-azure-virtual-machine"></a>Azure 仮想マシンで SQL Server に接続する
+## Azure 仮想マシンで SQL Server に接続する
 
 1. 仮想マシンの **[概要]** ページで、 **[接続]** ボタンを選択し、[RDP] を選択します。
 
@@ -97,7 +97,7 @@ lab:
 
     ![画像 22](../images/dp-300-module-01-lab-22.png)
 
-    **注:** エラー "**ポートの前提条件が満たされていません**" が表示された場合。 必ずリンクを選択して、"ポート番号" フィールドに記載されている宛先ポートを含む受信ネットワーク セキュリティ グループ ルールを追加します。**
+    **注:** エラー "**ポートの前提条件が満たされていません**" が表示された場合。 リンクを選択して、"ポート番号" フィールドに記載されている宛先ポートを含む受信ネットワーク セキュリティ グループ ルールを追加します。**
 
     ![画像 22_1](../images/dp-300-module-01-lab-22_1.png)
 
