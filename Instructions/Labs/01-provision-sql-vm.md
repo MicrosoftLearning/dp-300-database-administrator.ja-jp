@@ -113,9 +113,7 @@ lab:
 
     ![画像 26](../images/dp-300-module-01-lab-26.png)
 
-1. Windows の [スタート] ボタンを選択し、SSMS と入力します。 一覧から **[Microsoft SQL Server Management Studio 18]** を選択します。  
-
-    ![画像 34](../images/dp-300-module-01-lab-34.png)
+1. Windows の [スタート] ボタンを選択し、SSMS と入力します。 一覧から **[Microsoft SQL Server Management Studio]** を選びます。  
 
 1. SSMS が開くと、 **[サーバーに接続]** ダイアログに既定のインスタンス名が事前に入力されていることがわかります。 **[接続]** を選択します。
 
