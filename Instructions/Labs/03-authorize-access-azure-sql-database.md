@@ -24,7 +24,7 @@ lab:
 
     ![Azure portal ホーム ページのスクリーンショット ([すべてのリソース] を選択)](../images/dp-300-module-03-lab-01.png)
 
-1. Azure SQL Database サーバー **dp300-lab-xxxxxx** (**xxxxxx** はランダムな文字列) を選択し、 **[Active Directory 管理者]** の横の **[未構成]** を選択します。
+1. SQL サーバー **dp300-lab-xxxxxx** (**xxxxxx** はランダムな文字列) を選択し、 **[Active Directory 管理者]** の横の **[未構成]** を選択します。
 
     ![[未構成] を選択している画面のスクリーンショット](../images/dp-300-module-03-lab-02.png)
 
