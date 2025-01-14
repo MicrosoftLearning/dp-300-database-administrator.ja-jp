@@ -32,7 +32,7 @@ lab:
 
     ![[管理者の設定] を選択している画面のスクリーンショット](../images/dp-300-module-03-lab-03.png)
 
-1. **Azure Active Directory** サイド バーで、Azure portal にログインした Azure ユーザー名を検索し、 **[選択]** をクリックします。
+1. **Azure Active Directory** サイド バーで、Azure portal にログインした 自分のユーザー名を検索し、 **[選択]** をクリックします。
 
 1. **[保存]** を選択して手順を完了します。 これで次のように、自分のユーザー名がサーバーの Azure Active Directory 管理者になります。
 
