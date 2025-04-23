@@ -12,25 +12,31 @@ lab:
 
 > &#128221; 以下の手順は、Windows 10 コンピューター用です。 また、Linux または MacOS も使用できます。 選択した OS に対してラボの手順を調整する必要がある場合があります。
 
-### Windows 10 (OS)
+### Windows 11 (OS)
 
-1. Windows 10 (*バージョン 2004 以降*) をインストールします。
+1. Windows 11 をインストールします。
 
 1. すべての利用可能な更新プログラムを適用します。
 
 ### Edge
 
-1. [microsoft.com/edge] から最新バージョンの Microsoft Edge をインストールします。
+1. [https://microsoft.com/edge] から最新バージョンの Microsoft Edge をインストールします。
 
 ### Git
 
-1. [git-scm.com/downloads] からダウンロードしてインストールします。
+1. [https://git-scm.com/downloads ] からダウンロードしてインストールします。
+
+    - インストーラーで既定のオプションを使用します。
+
+### Azure CLI
+
+1. [https://aka.ms/installazurecliwindows ] からダウンロードしてインストールします。
 
     - インストーラーで既定のオプションを使用します。
 
 ### Visual Studio Code
 
-1. [code.visualstudio.com/download] からダウンロードしてインストールします。
+1. [https://code.visualstudio.com/download ] からダウンロードしてインストールします。
 
     - インストーラーで既定のオプションを使用します。
 
@@ -40,8 +46,10 @@ lab:
 
     - インストーラーで既定のオプションを使用します。
 
-### Azure Data Studio
+### SQL Server 2022 Developer Edition
 
-1. [https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio ] からダウンロードしてインストールします。
+1. [https://www.microsoft.com/en-us/sql-server/sql-server-downloads ] からダウンロードしてインストールします。
 
-    - インストーラーで既定のオプションを使用します。
+    - インストーラーで既定のオプションを使用します。 これらのラボには、SQL Server データベース エンジンのみが必要です。
+    - 既定のインスタンスを使用できます。
+    - 既定の認証モードを使用できます。
