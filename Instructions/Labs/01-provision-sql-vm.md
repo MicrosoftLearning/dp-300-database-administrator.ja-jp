@@ -14,7 +14,7 @@ lab:
 
 ## Azure 仮想マシンで SQL Server をデプロイする
 
-1. ラボの仮想マシンからブラウザー セッションを開始して [https://portal.azure.com](https://portal.azure.com/) に移動し、お使いの Azure サブスクリプションに関連付けられている Microsoft アカウントを使用してサインインします。
+1. ブラウザー セッションを開始して [https://portal.azure.com](https://portal.azure.com/) に移動し、お使いの Azure サブスクリプションに関連付けられている Microsoft アカウントを使用してサインインします。
 
 1. ページの上部にある検索バーを見つけます。 **Azure SQL** を検索します。 **[サービス]** の下の結果に表示される **Azure SQL** の検索結果を選択します。
 
