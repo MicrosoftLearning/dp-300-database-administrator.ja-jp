@@ -2,6 +2,8 @@
 lab:
   title: 独自の環境のセットアップ
   module: Setup your own environment
+  description: ご自分のコンピューターで DP-300 ラボを完了するために必要なツール (SQL Server Management Studio や Azure Data Studio など) をインストールします。 このガイドに従うと、実践的演習を始める前に、環境を確実に準備できます。
+  islab: false
 ---
 
 # ローカル ラボ環境のセットアップ

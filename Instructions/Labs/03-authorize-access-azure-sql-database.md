@@ -2,6 +2,16 @@
 lab:
   title: ラボ 3 – Microsoft Entra ID を使用して Azure SQL Database へのアクセスを承認する
   module: Implement a Secure Environment for a Database Service
+  description: Microsoft Entra ID を使って Azure SQL Database へのアクセスを許可し、T-SQL を使ってデータベース ユーザーを作成します。 それを終えると、Microsoft Entra と SQL ベースの認証の両方を実装してデータベースをセキュリティ保護する方法がわかります。
+  duration: 25 minutes
+  level: 300
+  islab: true
+  primarytopics:
+    - Azure
+    - Azure SQL Database
+    - Microsoft Entra
+    - Microsoft Entra ID
+    - SQL Server
 ---
 
 # データベースの認証と承認を構成する

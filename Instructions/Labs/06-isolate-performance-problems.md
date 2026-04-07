@@ -2,6 +2,13 @@
 lab:
   title: 'ラボ 6: 監視を通じてパフォーマンスの問題を特定する'
   module: Monitor and optimize operational resources in Azure SQL
+  description: Azure SQL Database のサーバー リソース メトリックを調べ、Query Performance Insight を使ってパフォーマンスの悪いクエリを特定します。 それを終えると、組み込みの監視ツールを使ってパフォーマンスの問題を事前に診断して調査する方法がわかります。
+  duration: 30 minutes
+  level: 400
+  islab: true
+  primarytopics:
+    - Azure
+    - Azure SQL Database
 ---
 
 # 監視を通じてパフォーマンスの問題を特定する

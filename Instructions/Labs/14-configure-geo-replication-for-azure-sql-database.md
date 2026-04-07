@@ -2,6 +2,13 @@
 lab:
   title: ラボ 14 – Azure SQL Database 用に geo レプリケーションを構成する
   module: Plan and implement a high availability and disaster recovery solution
+  description: 別の Azure リージョンに読み取り可能なセカンダリ レプリカを作成して手動フェールオーバーを実行するために、Azure SQL Database の geo レプリケーションを構成します。 それを終えると、リージョンの停止から保護するためにリージョン間の高可用性ソリューションを実装する方法がわかります。
+  duration: 30 minutes
+  level: 400
+  islab: true
+  primarytopics:
+    - Azure
+    - Azure SQL Database
 ---
 
 # Azure SQL Database 用に geo レプリケーションを構成する

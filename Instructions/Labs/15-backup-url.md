@@ -2,6 +2,10 @@
 lab:
   title: ラボ 15 – URL へのバックアップと URL からの復元
   module: Plan and implement a high availability and disaster recovery solution
+  description: URL を使って SQL Server データベースを Azure Blob Storage に直接バックアップし、それを復元して、人的エラーからの復旧をシミュレートします。 それを終えると、SQL Server のバックアップと復元の操作を Azure クラウド ストレージと統合する方法がわかります。
+  duration: 30 minutes
+  level: 300
+  islab: true
 ---
 
 # Backup to URL
