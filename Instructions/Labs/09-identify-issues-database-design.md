@@ -2,6 +2,10 @@
 lab:
   title: 'ラボ 9: データベース設計の問題を特定する'
   module: Optimize query performance in Azure SQL
+  description: AdventureWorks データベースを分析して、不十分な正規化、不適切なデータ型の選択、最適でないインデックス設計が原因であるパフォーマンスの問題を明らかにします。 それを終えると、クエリのパフォーマンスを向上させるためにデータベース スキーマを評価して改善する方法がわかります。
+  duration: 15 minutes
+  level: 100
+  islab: true
 ---
 
 # データベース設計の問題を特定する

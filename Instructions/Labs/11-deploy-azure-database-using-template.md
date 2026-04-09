@@ -2,6 +2,15 @@
 lab:
   title: 'ラボ 11: Azure Resource Manager テンプレートを使用して Azure SQL Database をデプロイする'
   module: Automate database tasks for Azure SQL
+  description: Azure SQL Database を調べ、Azure クイックスタート テンプレート ギャラリーの Azure Resource Manager テンプレートを使ってそれをデプロイします。 それを終えると、コードとしてのインフラストラクチャ アプローチを使って Azure SQL のデプロイを自動化する方法がわかります。
+  duration: 15 minutes
+  level: 300
+  islab: true
+  primarytopics:
+    - Azure
+    - Azure Resource Manager
+    - Azure SQL Database
+    - SQL Server
 ---
 
 # テンプレートから Azure SQL Database をデプロイする

@@ -2,6 +2,14 @@
 lab:
   title: ラボ 2 -Azure SQL Database をプロビジョニングする
   module: Plan and Implement Data Platform Resources
+  description: Virtual Network エンドポイントを使って Azure SQL Database を作成し、SQL Server Management Studio を使ってそれに接続します。 それを終えると、Azure にフル マネージド PaaS データベースをデプロイしてアクセスする方法がわかります。
+  duration: 40 minutes
+  level: 400
+  islab: true
+  primarytopics:
+    - Azure
+    - Azure SQL Database
+    - SQL Server
 ---
 
 # Azure SQL Database をプロビジョニングする

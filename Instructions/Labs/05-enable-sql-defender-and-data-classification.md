@@ -2,6 +2,15 @@
 lab:
   title: ラボ 5 – Microsoft Defender for SQL とデータ分類を有効にする
   module: Implement a Secure Environment for a Database Service
+  description: Azure SQL Database で Microsoft Defender for SQL を有効にし、Azure portal の推奨事項に基づいてデータ分類ラベルを適用します。 それを終えると、データベースのセキュリティ態勢を強化し、機密データを識別する方法がわかります。
+  duration: 30 minutes
+  level: 400
+  islab: true
+  primarytopics:
+    - Azure
+    - Azure Portal
+    - Azure SQL Database
+    - Microsoft Defender
 ---
 
 # Microsoft Defender for SQL とデータ分類を有効にする
