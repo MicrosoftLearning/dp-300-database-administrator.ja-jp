@@ -3,12 +3,11 @@ lab:
   title: ラボ 12 – SQL Server の CPU 状態アラートを作成する
   module: Automate database tasks for Azure SQL
   description: Azure SQL Server の CPU 使用率が定義されたしきい値を超えたら通知するよう、Azure Monitor アラートを構成します。 それを終えると、データベースのパフォーマンスを最適に保つための、自動監視とアラートの設定方法がわかります。
-  duration: 20 minutes
+  duration: 20
   level: 300
   islab: true
-  primarytopics:
-    - Azure
-    - SQL Server
+  status: released
+  targetDate: '2099-01-01'
 ---
 
 # Azure 上の SQL Server の CPU 状態アラートを作成する

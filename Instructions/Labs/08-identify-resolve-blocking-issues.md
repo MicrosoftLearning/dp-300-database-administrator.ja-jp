@@ -3,9 +3,11 @@ lab:
   title: 'ラボ 8: 障害となっている問題を特定して解決する'
   module: Optimize query performance in Azure SQL
   description: SQL Server でブロックされているセッションを特定し、ブロック シナリオを診断して軽減する方法を学びます。 それを終えると、動的管理ビューとクエリ ツールを使ってコンカレンシーの問題を解決する方法がわかります。
-  duration: 15 minutes
+  duration: 15
   level: 300
   islab: true
+  status: released
+  targetDate: '2099-01-01'
 ---
 
 # 障害となっている問題を特定して解決する

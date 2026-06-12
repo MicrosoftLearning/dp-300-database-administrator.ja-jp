@@ -3,9 +3,11 @@ lab:
   title: 'ラボ 10: SQL Database で低パフォーマンス クエリの問題領域を分離する'
   module: Optimize query performance in Azure SQL
   description: AdventureWorks2017 データベースに対してパフォーマンスが最善ではないクエリを実行し、実行プランを分析し、改善を適用してクエリ効率を向上させます。 それを終えると、SQL Server ツールを使って、パフォーマンスの悪い T-SQL クエリを診断して修正する方法がわかります。
-  duration: 30 minutes
+  duration: 30
   level: 300
   islab: true
+  status: released
+  targetDate: '2099-01-01'
 ---
 
 # SQL Database で低パフォーマンス クエリの問題領域を分離する

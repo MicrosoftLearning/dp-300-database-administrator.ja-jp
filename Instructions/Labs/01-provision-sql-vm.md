@@ -3,12 +3,11 @@ lab:
   title: 'ラボ 1: Azure 仮想マシンで SQL Server をプロビジョニングする'
   module: Plan and Implement Data Platform Resources
   description: Azure で SQL Server 仮想マシンをデプロイし、SQL Server Management Studioを使ってそれに接続します。 このラボでは、Azure での SQL Server の IaaS リソースとしてのプロビジョニングと構成を実践的に経験します。
-  duration: 30 minutes
+  duration: 30
   level: 300
   islab: true
-  primarytopics:
-    - Azure
-    - SQL Server
+  status: released
+  targetDate: '2099-01-01'
 ---
 
 # Azure 仮想マシンで SQL Server をプロビジョニングする
