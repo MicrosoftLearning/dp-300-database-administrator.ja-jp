@@ -3,12 +3,11 @@ lab:
   title: ラボ 13 – Automation Runbook をデプロイして、インデックスを自動的に再構築する
   module: Automate database tasks for Azure SQL
   description: スケジュールに従って Azure SQL Database 内のインデックスを自動的に再構築する Azure Automation Runbook を作成します。 それを終えると、Azure Automation を使って手動メンテナンス タスクを減らし、データベースのパフォーマンスを最適に保つ方法がわかります。
-  duration: 30 minutes
-  level: 400
+  duration: 30
+  level: 300
   islab: true
-  primarytopics:
-    - Azure
-    - SQL Server
+  status: released
+  targetDate: '2099-01-01'
 ---
 
 # Automation Runbook をデプロイして、インデックスを自動的に再構築する

@@ -3,14 +3,11 @@ lab:
   title: ラボ 5 – Microsoft Defender for SQL とデータ分類を有効にする
   module: Implement a Secure Environment for a Database Service
   description: Azure SQL Database で Microsoft Defender for SQL を有効にし、Azure portal の推奨事項に基づいてデータ分類ラベルを適用します。 それを終えると、データベースのセキュリティ態勢を強化し、機密データを識別する方法がわかります。
-  duration: 30 minutes
-  level: 400
+  duration: 30
+  level: 300
   islab: true
-  primarytopics:
-    - Azure
-    - Azure Portal
-    - Azure SQL Database
-    - Microsoft Defender
+  status: released
+  targetDate: '2099-01-01'
 ---
 
 # Microsoft Defender for SQL とデータ分類を有効にする
@@ -108,13 +105,13 @@ Azure にログインし、Azure で実行されている既存の Azure SQL Ser
 
     上の合格したセキュリティ チェックを選ぶと、構成したベースラインを確認できます。 今後変更が加えられた場合、それは脆弱性評価スキャンによって検出され、セキュリティ チェックは失敗します。  
 
-## Advanced Threat Protection
+## 高度な脅威保護
 
-1. 右上の **[X]** を選んで [脆弱性評価] ペインを閉じ、データベースの **[Microsoft Defender for Cloud]** ダッシュボードに戻ります。 **[セキュリティ インシデントとアラート]** には、どの項目も表示されません。 これは、**Advanced Threat Protection** で問題が検出されていないことを意味します。 データベースにアクセスしたりそれを悪用したりしようとする、通常とは異なる、害を及ぼす可能性のある試行を示す異常なアクティビティは、Advanced Threat Protection によって検出されます。  
+1. 右上の **[X]** を選んで [脆弱性評価] ペインを閉じ、データベースの **[Microsoft Defender for Cloud]** ダッシュボードに戻ります。 **[セキュリティ インシデントとアラート]** には、どの項目も表示されません。 これは、**高度な脅威保護** で問題が検出されていないことを意味します。 データベースにアクセスしたりそれを悪用したりしようとする、通常とは異なる、害を及ぼす可能性のある試行を示す異常なアクティビティは、高度な脅威保護 によって検出されます。  
 
-    > &#128221; この段階では、セキュリティ アラートは表示されません。 次の手順ではアラートをトリガーするテストを実行します。これにより、Advanced Threat Protection で結果を確認できるようになります。  
+    > &#128221; この段階では、セキュリティ アラートは表示されません。 次の手順ではアラートをトリガーするテストを実行します。これにより、高度な脅威保護 で結果を確認できるようになります。  
 
-    Advanced Threat Protection を使って、次のいずれかの発生が疑われる場合に、脅威を特定し、アラートを受け取ることができます。  
+    高度な脅威保護 を使って、次のいずれかの発生が疑われる場合に、脅威を特定し、アラートを受け取ることができます。  
 
     - SQL インジェクション
     - SQL インジェクションの脆弱性

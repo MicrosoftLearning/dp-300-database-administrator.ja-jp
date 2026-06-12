@@ -3,13 +3,11 @@ lab:
   title: ラボ 4 – Azure SQL Database ファイアウォール規則を構成する
   module: Implement a Secure Environment for a Database Service
   description: Azure SQL Database へのアクセスを制御するためにサーバーレベルとデータベースレベルのファイアウォール規則を構成し、T-SQL を使って包含データベースのユーザーを作成します。 それを終えると、ネットワーク セキュリティ制御を適用して Azure SQL リソースを保護する方法がわかります。
-  duration: 30 minutes
+  duration: 30
   level: 300
   islab: true
-  primarytopics:
-    - Azure
-    - Azure SQL Database
-    - SQL Server
+  status: released
+  targetDate: '2099-01-01'
 ---
 
 # 安全な環境を実装する

@@ -3,9 +3,11 @@ lab:
   title: ラボ 7 – 断片化の問題を検出して修正する
   module: Monitor and optimize operational resources in Azure SQL
   description: SQL Server データベースでインデックスの断片化を分析し、インデックスを再構築または再構成してクエリのパフォーマンスを向上させます。 それを終えると、断片化を検出し、適切な是正措置を行ってデータベースの効率を最適化する方法がわかります。
-  duration: 20 minutes
+  duration: 20
   level: 300
   islab: true
+  status: released
+  targetDate: '2099-01-01'
 ---
 
 # 断片化の問題を検出して修正する
